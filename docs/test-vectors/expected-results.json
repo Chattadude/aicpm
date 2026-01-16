@@ -22,20 +22,11 @@
     "edited_chunks": 0,
     "invalid_chunks": 0,
     "unverifiable_chunks": 1
-  }
-}
-{
-  "file": "mixed-document.json",
-  "expected": {
-    "overall": {
-      "status": "partial",
-      "ai_percent": 66.7,
-      "notes": "1 verified, 1 edited, 1 unverifiable (missing provider)"
-    },
-    "chunks": [
-      { "id": "chunk_1_verified", "status": "verified" },
-      { "id": "chunk_2_edited", "status": "edited" },
-      { "id": "chunk_3_unverifiable_missing_provider", "status": "unverifiable", "reason": "missing_provider" }
-    ]
+  },
+  "mixed-document.json": {
+    "verified_chunks": 1,
+    "edited_chunks": 1,
+    "invalid_chunks": 0,
+    "unverifiable_chunks": 1
   }
 }

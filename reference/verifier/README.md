@@ -30,3 +30,18 @@ node verifier.js ../../docs/test-vectors/valid-unmodified.json
 - A detector or classifier
 - A DRM or enforcement mechanism
 - A consumer-facing product
+
+Author / Model
+     |
+     |  (sign chunks)
+     v
+ AICPM Manifest
+     |
+     |  (embedded)
+     v
+ Document (HTML / MD / PDF)
+     |
+     |  (open + verify)
+     v
+ Reader / Browser / Tool
+

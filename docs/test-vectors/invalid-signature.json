@@ -1,0 +1,25 @@
+{
+  "aicpm_version": "0.1",
+  "created_at": "2026-01-16T00:00:00Z",
+  "providers": [
+    {
+      "provider_id": "example.ai",
+      "key_id": "test-key-1",
+      "alg": "ed25519",
+      "public_key_b64u": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "33333333-3333-3333-3333-333333333333",
+      "provider_id": "example.ai",
+      "model_id": "example-model",
+      "session_id": "session-3",
+      "timestamp": "2026-01-16T00:00:03Z",
+      "chunk_hash_b64u": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+      "key_id": "test-key-1",
+      "sig_b64u": "INVALIDINVALIDINVALIDINVALIDINVALIDINVALID",
+      "text_len": 30
+    }
+  ]
+}

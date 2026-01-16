@@ -1,3 +1,73 @@
+Reference Verifier
+
+This document defines a reference verifier for AICPM (Authenticated AI Content Provenance Marking).
+
+The reference verifier demonstrates how any third party—browser, publisher, auditor, or end user—can independently validate AI content provenance without trusting the content host or AI provider beyond their published public keys.
+
+The verifier is intentionally simple, transparent, and deterministic.
+
+1. Verifier Goals
+
+A conforming AICPM verifier MUST:
+
+Verify cryptographic signatures on AI-generated content chunks
+
+Validate integrity of chunk text against recorded hashes
+
+Distinguish between unmodified and edited AI-origin content
+
+Operate entirely client-side (no network calls required)
+
+Require no proprietary services or accounts
+
+A verifier MUST NOT:
+
+Attempt probabilistic AI detection
+
+Infer intent, quality, or truthfulness
+
+Enforce policy or moderation decisions
+
+Require access to private keys or training data
+
+2. Inputs
+
+A reference verifier consumes the following inputs:
+
+2.1 Document Content
+
+The rendered text content as presented to the user (e.g., HTML, Markdown, PDF text layer).
+
+2.2 AICPM Manifest
+
+A non-executing embedded block containing:
+
+AICPM version
+
+Provider registry
+
+Chunk metadata
+
+Cryptographic signatures
+
+Example (simplified):
+
+<script type="application/aicpm+json">
+{
+  "aicpm_version": "0.1",
+  "created_at": "2026-01-15T18:22:11Z",
+  "providers": [
+    {
+      "provider_id": "example-ai",
+      "public_keys": [
+        { "key_id": "ed25519-2026-01", "alg": "ed25519", "key": "..." }
+      ]
+    }
+  ],
+  "chunks": [ ... ]
+}
+</script>
+
 3. Verification Steps
 
 A conforming verifier MUST perform the following steps in order.

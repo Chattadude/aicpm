@@ -1,0 +1,26 @@
+{
+  "valid-unmodified.json": {
+    "verified_chunks": 1,
+    "edited_chunks": 0,
+    "invalid_chunks": 0,
+    "unverifiable_chunks": 0
+  },
+  "valid-edited.json": {
+    "verified_chunks": 0,
+    "edited_chunks": 1,
+    "invalid_chunks": 0,
+    "unverifiable_chunks": 0
+  },
+  "invalid-signature.json": {
+    "verified_chunks": 0,
+    "edited_chunks": 0,
+    "invalid_chunks": 1,
+    "unverifiable_chunks": 0
+  },
+  "missing-provider.json": {
+    "verified_chunks": 0,
+    "edited_chunks": 0,
+    "invalid_chunks": 0,
+    "unverifiable_chunks": 1
+  }
+}

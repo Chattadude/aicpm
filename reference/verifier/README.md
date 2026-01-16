@@ -16,3 +16,17 @@ Run:
 
 ```bash
 node verifier.js ../../docs/test-vectors/valid-unmodified.json
+
+## What AICPM Is
+
+- A provenance *architecture*, not a watermark
+- Chunk-level, provider-signed AI disclosure
+- Verifiable without vendor APIs
+- Editor- and browser-friendly
+
+## What AICPM Is Not
+
+- A content moderation system
+- A detector or classifier
+- A DRM or enforcement mechanism
+- A consumer-facing product

@@ -1,0 +1,55 @@
+{
+  "aicpm_version": "0.1",
+  "created_at": "2026-01-16T00:00:00Z",
+  "document_id": "doc_mixed_001",
+  "providers": [
+    {
+      "provider_id": "aicpm.demo.provider",
+      "keys": [
+        {
+          "key_id": "demo-key-1",
+          "alg": "Ed25519",
+          "public_key_b64": "REPLACE_WITH_SAME_PUBLIC_KEY_USED_IN_VALID_TESTS"
+        }
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "id": "chunk_1_verified",
+      "provider_id": "aicpm.demo.provider",
+      "model_id": "mock-model-1",
+      "session_id": "sess_demo_001",
+      "timestamp": "2026-01-16T00:00:00Z",
+      "key_id": "demo-key-1",
+      "text_len": 124,
+      "chunk_hash_b64u": "REPLACE_WITH_HASH_FROM_valid-unmodified_FOR_THIS_TEXT",
+      "sig_b64u": "REPLACE_WITH_SIGNATURE_FROM_valid-unmodified_FOR_THIS_TEXT",
+      "text": "This is a mock AI-generated paragraph used to demonstrate provider-signed provenance at the chunk level."
+    },
+    {
+      "id": "chunk_2_edited",
+      "provider_id": "aicpm.demo.provider",
+      "model_id": "mock-model-1",
+      "session_id": "sess_demo_001",
+      "timestamp": "2026-01-16T00:00:10Z",
+      "key_id": "demo-key-1",
+      "text_len": 150,
+      "chunk_hash_b64u": "REPLACE_WITH_HASH_FROM_valid-unmodified_OR_valid-edited_BASELINE",
+      "sig_b64u": "REPLACE_WITH_SIGNATURE_FROM_BASELINE",
+      "text": "This is a mock AI-generated paragraph used to demonstrate provider-signed provenance at the chunk level. (edited)"
+    },
+    {
+      "id": "chunk_3_unverifiable_missing_provider",
+      "provider_id": "nonexistent.provider",
+      "model_id": "mock-model-1",
+      "session_id": "sess_demo_999",
+      "timestamp": "2026-01-16T00:00:20Z",
+      "key_id": "missing-key",
+      "text_len": 96,
+      "chunk_hash_b64u": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "sig_b64u": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+      "text": "This chunk claims to be signed, but the provider/key is not present in the manifest."
+    }
+  ]
+}

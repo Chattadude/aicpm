@@ -1,0 +1,29 @@
+WHAT THIS IS / WHAT THIS IS NOT
+Public Manifesto (Phase I)
+
+What this is
+- A logic-structure mirror for claims (LFV) plus a structure/provenance label for information (AICPM).
+- A labeling layer that preserves reader choice.
+- A system that makes scope, uncertainty, and falsifiability visible.
+
+What this is not
+- Not censorship.
+- Not a ministry of truth.
+- Not a political tool.
+- Not a trust score or credibility ranker.
+- Not a replacement for science.
+- Not a system that tells you how to vote, think, or feel.
+
+Non-negotiable commitments
+- User choice: always opt-in.
+- Transparency: rules are public and versioned.
+- Neutral vocabulary: PASS/FAIL/UNKNOWN/OVERCLAIMED/UNDERDETERMINED only.
+- No motive inference: LFV cannot infer intent.
+- No suppression: labeling only.
+
+The promise
+- If a claim is strong, it survives.
+- If a claim is sloppy, the label shows where.
+- The reader remains sovereign.
+
+End of Manifesto

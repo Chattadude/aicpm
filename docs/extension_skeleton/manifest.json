@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "LFV + AICPM",
+  "version": "0.1.0",
+  "description": "Logic-structure (LFV) + information structure (AICPM) labels. Opt-in, non-blocking.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_title": "LFV/AICPM",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

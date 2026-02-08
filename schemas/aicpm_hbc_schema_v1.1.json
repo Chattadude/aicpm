@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AICPM_HBC_v1_1",
+  "type": "object",
+  "required": [
+    "version",
+    "temporal_alignment",
+    "scope_alignment",
+    "magnitude_alignment",
+    "certainty_alignment",
+    "disclosure_timing"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": [
+        "AICPM-HBC-v1.1"
+      ]
+    },
+    "temporal_alignment": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "MISALIGNED",
+        "UNKNOWN"
+      ]
+    },
+    "scope_alignment": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "MISALIGNED",
+        "UNKNOWN"
+      ]
+    },
+    "magnitude_alignment": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "MISALIGNED",
+        "UNKNOWN"
+      ]
+    },
+    "certainty_alignment": {
+      "type": "string",
+      "enum": [
+        "OK",
+        "REDUCED",
+        "UNKNOWN"
+      ]
+    },
+    "disclosure_timing": {
+      "type": "string",
+      "enum": [
+        "EARLY",
+        "LATE",
+        "UNKNOWN"
+      ]
+    },
+    "neutral_advisory": {
+      "type": "string"
+    }
+  }
+}

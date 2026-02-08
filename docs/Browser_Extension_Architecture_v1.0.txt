@@ -1,0 +1,32 @@
+Browser Extension - Technical Architecture (Phase I)
+Status: Developer-ready specification (opt-in, non-blocking, deterministic)
+
+Goals & guardrails
+- Opt-in only (user invokes analysis)
+- Non-blocking (never hides or ranks content)
+- Deterministic (rules decide; no ML judgments)
+- Transparent (ruleset IDs shown on every label)
+- Privacy-first (local by default)
+
+Components
+- Content script: selection capture, context menu, verbatim claim extraction
+- Side panel UI: renders dual label; copy/export/print
+- LFV engine (local): deterministic pipeline gates A-F
+- AICPM extractor (local): metadata, citations, explicit sponsorship markers, declared AI involvement only
+- Background service worker: message routing, settings, versioning, optional uploads
+
+User flow
+Select -> context menu "Analyze" -> side panel -> optional export/print -> close
+
+Privacy
+- Default: local processing only, no telemetry
+- Optional: user-enabled submission for stress testing; never auto-upload
+
+Versioning
+- Every label shows ruleset IDs and versions
+- Updates require new version IDs + public changelog
+
+Non-features (by design)
+- No scores, rankings, blocking, motive inference, or policy guidance
+
+End of Extension Architecture Spec

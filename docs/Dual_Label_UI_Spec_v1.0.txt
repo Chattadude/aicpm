@@ -1,0 +1,38 @@
+Dual AICPM + LFV Label - UI & Print Layout (Phase I)
+Status: Publish-ready specification (neutral, printable, embeddable)
+
+Design principles
+- Neutral monochrome (no green/red, no scores)
+- 10-second read
+- One claim at a time
+- Labels, not judgments
+- Uncertainty visible
+- Versioned ruleset shown
+
+Side panel layout
+- Claim (verbatim)
+- Source (URL or user-selected)
+- Ruleset IDs
+- AICPM section: content type, evidence type, time scope, lineage, transparency, incentives, AI involvement
+- LFV section: claim type, constraint checks, scope risk, flags, falsifiability, final label
+- Actions: Copy label, Export JSON, Print
+
+Printable one-page label
+- Header: claim (verbatim), source/date, ruleset IDs
+- Left: AICPM fields
+- Right: LFV checks + final label
+- Footer: "Structure only. No intent/credibility/policy."
+
+Micro-badges (optional)
+- "STRUCTURE" and "LOGIC" badges that open the full label
+- No color grading, no ranking
+
+Accessibility
+- WCAG-AA contrast
+- keyboard navigation
+- locale-ready strings
+
+Data contract
+- One exportable object containing: claim, source, ruleset versions, aicpm object, lfv object
+
+End of Dual Label Spec

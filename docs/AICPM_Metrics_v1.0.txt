@@ -1,0 +1,30 @@
+AICPM v1.0 METRICS SPECIFICATION
+AI Content & Provenance Marking
+Version: AICPM-MS-v1.0
+Status: Frozen for Phase I
+
+Purpose
+AICPM describes the structure and provenance of information. It does not rate trust or credibility.
+
+Rule
+If unknown, label Unknown. Never infer.
+
+A) One-Page AICPM Label (Printable)
+- Content Type: claim, opinion, prediction, report/news, research summary, policy/legal, advertisement/sponsored, satire, mixed
+- Evidence Type: none stated, anecdote, measurement, dataset (public/private), experiment/RCT, observational study, model/simulation, expert synthesis, legal/regulatory text, mixed
+- Time Scope & Freshness: time window referenced, "as of" date present, update recency
+- Source Lineage: primary cited, secondary summary, chain length, citation density
+- Method Transparency: methods described, data accessibility, reproducible steps
+- Incentive & Conflict Disclosure: sponsored/affiliate, advocacy involvement, financial conflicts disclosed
+- AI Involvement: AI-generated, AI-assisted, human editor identified
+
+B) Field Dictionary
+- Content Type: communicative form (not accuracy)
+- Evidence Type: kind of support claimed/cited
+- Time Window: period referenced or measured
+- Source Lineage: hops from original sources
+- Method Transparency: methods/data described and accessible
+- Incentives: explicit sponsorship/conflict disclosure
+- AI Involvement: declared AI use only
+
+End of AICPM-MS-v1.0

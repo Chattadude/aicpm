@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AICPM_OpinionVsNews_Module_v1_0",
+  "type": "object",
+  "required": [
+    "module",
+    "content_type_suggestion",
+    "confidence",
+    "reasons"
+  ],
+  "properties": {
+    "module": {
+      "type": "string",
+      "enum": [
+        "AICPM-OPN-v1.0"
+      ]
+    },
+    "content_type_suggestion": {
+      "type": "string",
+      "description": "Suggested AICPM content_type classification.",
+      "enum": [
+        "report",
+        "opinion",
+        "prediction",
+        "mixed"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "reasons": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 12
+    },
+    "signals": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "opinion": { "type": "number" },
+        "report": { "type": "number" },
+        "prediction": { "type": "number" },
+        "mixed": { "type": "number" }
+      }
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

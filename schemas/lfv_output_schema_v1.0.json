@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LFV_v1_0_Output",
+  "type": "object",
+  "required": [
+    "ruleset_version",
+    "claim",
+    "claim_type",
+    "constraints",
+    "scope_risk",
+    "flags",
+    "falsifiability",
+    "final_label"
+  ],
+  "properties": {
+    "ruleset_version": {
+      "type": "string",
+      "enum": [
+        "LFV-RB-v1.0"
+      ]
+    },
+    "claim": {
+      "type": "string"
+    },
+    "claim_type": {
+      "type": "string",
+      "enum": [
+        "invariant",
+        "empirical_bounded",
+        "universal_empirical",
+        "predictive",
+        "normative"
+      ]
+    },
+    "constraints": {
+      "type": "object",
+      "required": [
+        "consistency",
+        "causality",
+        "conservation",
+        "scale",
+        "dependencies"
+      ],
+      "properties": {
+        "consistency": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "causality": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "conservation": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "scale": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "dependencies": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        }
+      }
+    },
+    "scope_risk": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ]
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ABSOLUTE_LANGUAGE",
+          "SCOPE_RISK",
+          "BIAS_RISK",
+          "LOW_FALSIFIABILITY"
+        ]
+      }
+    },
+    "falsifiability": {
+      "type": "string"
+    },
+    "final_label": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN",
+        "UNDERDETERMINED",
+        "OVERCLAIMED"
+      ]
+    }
+  }
+}

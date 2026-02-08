@@ -1,0 +1,45 @@
+AICPM v1.1 ADDER - Headline-Body Consistency (HBC)
+Status: Phase I extension proposal (structure-only)
+
+Purpose
+Preserve expectation integrity between headline and body without judging intent.
+
+HBC belongs in AICPM (structure), not LFV (claim logic).
+
+Deterministic pipeline
+A) Headline expectation extraction
+- Temporal implication: immediate/recent/historical/unspecified
+- Event type
+- Magnitude: numbers, absolutes
+- Certainty language
+
+B) Body grounding extraction
+- Explicit dates
+- Clarifiers (historical/archive/in YYYY)
+- Corrections/reframing
+- Disclosure timing (early vs late)
+
+C) Alignment comparison across axes
+- Temporal alignment (aligned/misaligned)
+- Scope alignment
+- Magnitude alignment
+- Certainty alignment
+- Context disclosure timing (early/late)
+
+Output (nutrition-style, no intent labels)
+Headline-Body Consistency (HBC)
+- Temporal alignment: OK/MISALIGNED
+- Scope alignment: OK/MISALIGNED
+- Magnitude alignment: OK/MISALIGNED
+- Certainty alignment: OK/REDUCED
+- Disclosure timing: EARLY/LATE
+
+Neutral advisory example
+"Headline implies current event. Article describes historical event (1979)."
+
+Non-goals
+- No "clickbait" label
+- No ranking or blocking
+- No motive inference
+
+End of HBC Addendum

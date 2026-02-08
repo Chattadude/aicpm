@@ -1,0 +1,197 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AICPM_v1_0",
+  "type": "object",
+  "required": [
+    "version",
+    "content_type",
+    "evidence_type",
+    "time_scope",
+    "source_lineage",
+    "method_transparency",
+    "incentives",
+    "ai_involvement"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": [
+        "AICPM-MS-v1.0"
+      ]
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "claim",
+        "opinion",
+        "prediction",
+        "report",
+        "research_summary",
+        "policy_legal",
+        "advertisement",
+        "satire",
+        "mixed"
+      ]
+    },
+    "evidence_type": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "none_stated",
+          "anecdote",
+          "measurement",
+          "dataset_public",
+          "dataset_private",
+          "experiment_rct",
+          "observational_study",
+          "model_simulation",
+          "expert_synthesis",
+          "legal_text",
+          "mixed"
+        ]
+      }
+    },
+    "time_scope": {
+      "type": "object",
+      "required": [
+        "window",
+        "as_of_present",
+        "update_recency"
+      ],
+      "properties": {
+        "window": {
+          "type": "string"
+        },
+        "as_of_present": {
+          "type": "boolean"
+        },
+        "update_recency": {
+          "type": "string"
+        }
+      }
+    },
+    "source_lineage": {
+      "type": "object",
+      "required": [
+        "primary_cited",
+        "secondary_summary",
+        "chain_length",
+        "citation_density"
+      ],
+      "properties": {
+        "primary_cited": {
+          "type": "boolean"
+        },
+        "secondary_summary": {
+          "type": "boolean"
+        },
+        "chain_length": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "citation_density": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      }
+    },
+    "method_transparency": {
+      "type": "object",
+      "required": [
+        "methods_described",
+        "data_access",
+        "reproducible_steps"
+      ],
+      "properties": {
+        "methods_described": {
+          "type": "string",
+          "enum": [
+            "none",
+            "partial",
+            "full"
+          ]
+        },
+        "data_access": {
+          "type": "string",
+          "enum": [
+            "open",
+            "restricted",
+            "unavailable"
+          ]
+        },
+        "reproducible_steps": {
+          "type": "boolean"
+        }
+      }
+    },
+    "incentives": {
+      "type": "object",
+      "required": [
+        "sponsored",
+        "advocacy_involvement",
+        "financial_conflicts_disclosed"
+      ],
+      "properties": {
+        "sponsored": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "not_mentioned"
+          ]
+        },
+        "advocacy_involvement": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "not_mentioned"
+          ]
+        },
+        "financial_conflicts_disclosed": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "not_mentioned"
+          ]
+        }
+      }
+    },
+    "ai_involvement": {
+      "type": "object",
+      "required": [
+        "ai_generated",
+        "ai_assisted",
+        "human_editor_identified"
+      ],
+      "properties": {
+        "ai_generated": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "unknown"
+          ]
+        },
+        "ai_assisted": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "no",
+            "unknown"
+          ]
+        },
+        "human_editor_identified": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

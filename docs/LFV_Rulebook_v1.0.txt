@@ -1,0 +1,101 @@
+LFV v1.0 RULEBOOK
+Logical Fact Validation - Public, Deterministic, Publish-Ready
+Version: LFV-RB-v1.0
+Status: Frozen for Phase I
+
+1. Scope & Intent
+LFV outputs logic-structure labels for individual claims. It answers:
+"Can this claim logically stand as written?"
+LFV does not decide policy, morality, motive, or what anyone should believe or do.
+
+2. Inputs (Strict)
+- One claim, pasted verbatim (single sentence or short paragraph).
+- No paraphrasing, summarizing, or interpretation before analysis.
+
+3. Outputs (Only These)
+Final Labels
+- PASS: logically possible and properly scoped for its claim type.
+- FAIL: violates a logical constraint (impossibility, contradiction, invariant violation).
+- UNKNOWN: well-formed but undecidable from logic alone without additional data.
+- UNDERDETERMINED: ambiguous (variables undefined or terms overloaded).
+- OVERCLAIMED: scope exceeds what the evidence/wording can support.
+
+Flags (Non-verdict)
+- Absolute Language Flag
+- Scope Risk Flag (Low/Medium/High)
+- Bias Risk Flag
+- Low Falsifiability Flag
+
+LFV may include a brief Falsifiability Statement ("This claim would be falsified if...").
+
+4. Prohibited Content (Never Output)
+- Motive inference (e.g., "money grab," "lied," "propaganda").
+- Calls to action or policy guidance.
+- Emotional adjectives or ridicule.
+- Ranking people, outlets, or institutions.
+- Suppression, blocking, or feed manipulation recommendations.
+
+5. Deterministic Pipeline (Must Run in Order)
+
+Gate A - Variable Definition Gate
+If key terms map to multiple variables (e.g., boy/girl, safe, works, good):
+- List distinct interpretations, OR
+- Output UNDERDETERMINED until the variable is explicit.
+
+Gate B - Claim Type Gate
+Classify exactly one:
+1) Invariant/Tautology (logic/math/thermodynamics-type constraints)
+2) Empirical Bounded (observations within time/place)
+3) Universal Empirical ("always/never/all")
+4) Predictive (future outcomes)
+5) Normative ("should/must")
+
+Rules:
+- Normative -> OUT OF SCOPE -> label UNDERDETERMINED (normative).
+- Universal Empirical -> trigger Absolute Language Flag.
+
+Gate C - Constraint Checks
+Test five constraints:
+1) Internal Consistency (no contradictions)
+2) Causality Order (causes precede effects)
+3) Conservation/Feasibility (no creation from nothing; invariant limits)
+4) Scale Sanity (magnitudes/timeframes not self-contradictory)
+5) Dependency Validity (required conditions not omitted)
+
+Any violated constraint -> FAIL.
+
+Gate D - Scope vs Evidence Window
+Assess mismatch between claim scope and implied/known evidence window.
+- Broad scope + narrow window -> higher Scope Risk.
+- Empirical claims cannot be upgraded to absolutes without invariants.
+
+Unbounded absolutes -> OVERCLAIMED.
+
+Gate E - Bias & Auditability (Logic-Only)
+Do not assume bias. Flag whether bias is logically excludable.
+- Opaque data/pipeline -> Bias Risk Flag.
+- Independent, non-overlapping constraints may be noted as Redundancy (no scoring).
+
+Gate F - Falsifiability Requirement
+State what observation would falsify the claim.
+- If none exists -> Low Falsifiability Flag (often -> UNKNOWN).
+
+6. Absolute Language Handling
+Words like always, never, all, none, proven, settled, unequivocal, guaranteed, harmless, causes:
+- Trigger Absolute Language Flag.
+- Force Scope Check.
+
+Universal negatives may PASS only when grounded in invariants (e.g., thermodynamic impossibilities). Otherwise -> OVERCLAIMED.
+
+7. Treatment of Measurement
+- "Accurate" means within stated uncertainty, not perfection.
+- Claims of zero bias in empirical systems -> FAIL (bias pathways are logically non-zero).
+
+8. Reader Sovereignty
+LFV provides structure, not belief. The reader interprets the label and decides next steps.
+
+9. Versioning & Transparency
+- Every LFV output must display Ruleset ID: LFV-RB-v1.0.
+- Changes require a new version with a public changelog.
+
+End of LFV-RB-v1.0
